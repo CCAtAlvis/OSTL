@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""get it from here: https://medium.com/swlh/lets-write-a-chat-app-in-python-f6783a9ac170"""
 """Script for Tkinter GUI chat client."""
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
@@ -32,7 +31,7 @@ def on_closing(event=None):
     send()
 
 top = tkinter.Tk()
-top.title("Chatter")
+top.title("Chit Chat")
 
 messages_frame = tkinter.Frame(top)
 my_msg = tkinter.StringVar()  # For the messages to be sent.
