@@ -2,7 +2,7 @@
 """Server code for multithreaded chat application."""
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
-
+import re
 
 def accept_incoming_connections():
     """Sets up handling for incoming clients."""
@@ -32,7 +32,6 @@ def handle_client(client):  # Takes client socket as argument.
             del clients[client]
             broadcast(bytes("%s has left the chat." % name, "utf8"))
             break
-
 
 def broadcast(msg, prefix=""):  # prefix is for name identification.
     """Broadcasts a message to all the clients."""
